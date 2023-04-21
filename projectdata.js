@@ -1,24 +1,24 @@
-const mainMenu = document.querySelector('#mainMenu');
-const closeMenu = document.querySelector('.closeMenu');
-const openMenu = document.querySelector('.openMenu');
-const portfolio = document.querySelector('a[href="#my-work"]');
-const aboutMe = document.querySelector('a[href="#about-me"]');
-const contactMe = document.querySelector('a[href="#contact-me"]');
+const hamburger = document.querySelector('.menu');
+const mobileMenu = document.querySelector('.mobile-menu');
+const mobilelistlink = document.querySelectorAll('#mobilelist li a');
+const cancelBtn = document.querySelector('#cancel-btn');
 
-function show() {
-  mainMenu.style.display = 'flex';
-  mainMenu.style.top = '0';
-}
+const toggleMobileMenu = () => {
+  hamburger.classList.toggle('hide');
+  cancelBtn.classList.toggle('hide');
+  mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
+};
+const hideMobileMenu = () => {
+  hamburger.classList.remove('hide');
+  cancelBtn.classList.add('hide');
+  mobileMenu.style.display = 'none';
+};
+hamburger.addEventListener('click', toggleMobileMenu);
+mobilelistlink.forEach((a) => {
+  a.addEventListener('click', hideMobileMenu);
+});
 
-function close() {
-  mainMenu.style.top = '-100%';
-}
-
-openMenu.addEventListener('click', show);
-closeMenu.addEventListener('click', close);
-portfolio.addEventListener('click', close);
-aboutMe.addEventListener('click', close);
-contactMe.addEventListener('click', close);
+cancelBtn.addEventListener('click', hideMobileMenu);
 
 // for creating a list of buttons for workcard and popup
 const createButtonList = (project, techlist) => {
@@ -44,7 +44,7 @@ const projectDetails = [
     source: 'https://github.com/yashodhicy/MyPortofolio',
   },
   {
-    name: 'Project 2',
+    name: 'Keeping track of hundreds of components',
     description: 'Lorem ipsum dolor sit amet',
     image: 'images/popupmobile.png',
     technologies: ['Ruby on rails', 'HTML', 'CSS', 'JavaScript'],
@@ -52,16 +52,7 @@ const projectDetails = [
     source: 'https://github.com/yashodhicy/MyPortofolio',
   },
   {
-    name: 'Project 3',
-    description: 'Lorem ipsum dolor sit amet',
-    image: 'images/popupmobile.png',
-    technologies: ['Ruby on rails', 'HTML', 'CSS', 'JavaScript'],
-    live: 'https://yashodhicy.github.io/',
-    source: 'https://github.com/yashodhicy/MyPortofolio',
-  },
-
-  {
-    name: 'Project 4',
+    name: 'Keeping track of hundreds of components',
     description: 'Lorem ipsum dolor sit amet',
     image: 'images/popupmobile.png',
     technologies: ['Ruby on rails', 'HTML', 'CSS', 'JavaScript'],
@@ -70,7 +61,7 @@ const projectDetails = [
   },
 
   {
-    name: 'Project 5',
+    name: 'Keeping track of hundreds of components',
     description: 'Lorem ipsum dolor sit amet',
     image: 'images/popupmobile.png',
     technologies: ['Ruby on rails', 'HTML', 'CSS', 'JavaScript'],
@@ -79,7 +70,16 @@ const projectDetails = [
   },
 
   {
-    name: 'Project 6',
+    name: 'Keeping track of hundreds of components',
+    description: 'Lorem ipsum dolor sit amet',
+    image: 'images/popupmobile.png',
+    technologies: ['Ruby on rails', 'HTML', 'CSS', 'JavaScript'],
+    live: 'https://yashodhicy.github.io/',
+    source: 'https://github.com/yashodhicy/MyPortofolio',
+  },
+
+  {
+    name: 'Keeping track of hundreds of components',
     description: 'Lorem ipsum dolor sit amet',
     image: 'images/popupmobile.png',
     technologies: ['Ruby on rails', 'HTML', 'CSS', 'JavaScript'],
