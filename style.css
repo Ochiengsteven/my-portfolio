@@ -29,18 +29,76 @@ section {
   background-repeat: no-repeat;
 }
 
-header {
-  background-color: white;
-  flex-direction: row;
-  justify-content: right;
-  align-items: center;
+.app-header {
   display: flex;
-  position: fixed;
-  top: 0;
-  height: 2rem;
-  width: 100%;
-  margin: 0;
-  z-index: 999;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 2%;
+}
+
+.menuItems {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15%;
+}
+
+.menu {
+  font-family: Inter, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #505f79;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: sans-serif;
+  padding: 15px;
+}
+
+nav #mainMenu {
+  display: flex;
+}
+
+nav #mainMenu li a {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #505f79;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 44px;
+}
+
+nav #mainMenu li a:hover {
+  color: #172b4d;
+}
+
+nav .openMenu {
+  display: none;
+  font-size: 2rem;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.closeMenu {
+  color: #67798e;
+}
+
+nav #mainMenu .closeMenu {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 footer {
@@ -497,19 +555,29 @@ textarea:hover {
 /* -------------Desktop version ---------- */
 
 @media screen and (min-width: 768px) {
-  header {
+  nav #mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+    transition: top 1s ease;
     display: none;
   }
 
-  #desktop-nav {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
+  nav #mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 
-  #mobile-nav {
-    display: none;
+  nav .openMenu {
+    display: block;
   }
 
   .work,

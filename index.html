@@ -7,19 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script defer src="app.js"></script>
+    <!--fontawesome icons-->
+    <script src="https://kit.fontawesome.com/27be2fb22c.js" crossorigin="anonymous"></script>
     <title>My Portfolio</title>
 </head>
 
 <body>
-    <header>
-        <nav id="mobile-nav">
-            <button class="menu">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
+    <header class="app-header">
+        <nav>
+            <div class="openMenu"><i class="fa-solid fa-bars"></i></div>
+            <div class="menu">
+                    <ul id="mainMenu" class="list">
+                        <div class="menuItems">
+                            <li><a href="#my-work">Portfolio</a></li>
+                            <li><a href="#about-me">About</a></li>
+                            <li><a href="#contact-me">Contact</a></li>
+                        </div>
+                        <div class="closeMenu"><i class="fa fa-times"></i></div>
+                    </ul>
+            </div>
         </nav>
-        <button id="cancel-btn" class="hide"></button>
     </header>
 
     <main>
