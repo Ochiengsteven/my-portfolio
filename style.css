@@ -250,7 +250,6 @@ button {
   border-radius: 5px;
 }
 
-/* fit ancor tag to button size */
 .work-card a,
 .project-ancor {
   width: fit-content;
@@ -271,8 +270,6 @@ button {
   color: #3dc58c;
   border-radius: 5px;
 }
-
-/* add form */
 
 #contact-form {
   display: flex;
@@ -382,9 +379,6 @@ textarea:hover {
   margin: 0.5rem auto;
 }
 
-/* end-form */
-
-/* cancel button */
 .hide {
   display: none !important;
 }
@@ -393,7 +387,6 @@ textarea:hover {
   display: flex;
 }
 
-/* popup window */
 #popup {
   display: none;
   flex-direction: column;
@@ -484,8 +477,6 @@ textarea:hover {
   font-weight: 600;
 }
 
-/* validation error message */
-
 .error-message {
   color: #ff6163;
   font-family: inter, sans-serif;
@@ -493,8 +484,6 @@ textarea:hover {
   font-size: 15px;
   line-height: 20px;
 }
-
-/* -------------Desktop version ---------- */
 
 @media screen and (min-width: 768px) {
   header {
@@ -621,7 +610,6 @@ textarea:hover {
     display: none;
   }
 
-  /* adding animation */
   #desktop-nav ul li a:hover {
     font-size: 1.2rem;
     color: #36b37e;
@@ -630,8 +618,6 @@ textarea:hover {
     border-radius: 4rem;
     padding: 0.4rem;
   }
-
-  /* Desktop styles  popup */
 
   #popup {
     flex-direction: column;
@@ -711,8 +697,6 @@ textarea:hover {
   #popup .tags {
     margin: 2px 0;
     border-radius: 4px;
-
-    /* gap: 0.1rem; */
   }
 
   #popup .tags button {
@@ -730,14 +714,12 @@ textarea:hover {
   }
 }
 
-/* media query to solve the responsive problem in desktop-nav with background */
 @media (max-width: 1034px) and (min-width: 768px) {
   #container {
     background-size: 110%;
   }
 }
 
-/* media query to solve responsive problem in .work-card2 */
 @media (max-width: 1110px) and (min-width: 768px) {
   .work-card2 {
     height: 400px;
@@ -762,7 +744,6 @@ textarea:hover {
   transition: font-size 3s ease, font-weight 2s ease, color 2s ease;
 }
 
-/* media query for hide desktop-nav in mobile version */
 @media only screen and (max-width: 768px) {
   #desktop-nav {
     display: none;
