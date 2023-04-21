@@ -1,23 +1,40 @@
+// Select the hamburger, mobile menu, mobile list links, and cancel button elements
 const hamburger = document.querySelector('.menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const mobilelistlink = document.querySelectorAll('#mobilelist li a');
 const cancelBtn = document.querySelector('#cancel-btn');
 
-const toggleMobileMenu = () => {
+// Define a function to toggle the mobile menu visibility
+function toggleMobileMenu() {
+  // Toggle the "hide" class on the hamburger and cancel button elements
   hamburger.classList.toggle('hide');
   cancelBtn.classList.toggle('hide');
-  mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
-};
-const hideMobileMenu = () => {
+  // Toggle the display property of the mobile menu element
+  if (mobileMenu.style.display === 'flex') {
+    mobileMenu.style.display = 'none';
+  } else {
+    mobileMenu.style.display = 'flex';
+  }
+}
+
+// Define a function to hide the mobile menu
+function hideMobileMenu() {
+  // Remove the "hide" class from the hamburger element and add it to the cancel button element
   hamburger.classList.remove('hide');
   cancelBtn.classList.add('hide');
+  // Set the display property of the mobile menu element to "none"
   mobileMenu.style.display = 'none';
-};
-hamburger.addEventListener('click', toggleMobileMenu);
-mobilelistlink.forEach((a) => {
-  a.addEventListener('click', hideMobileMenu);
-});
+}
 
+// Add a click event listener to the hamburger element that toggles the mobile menu visibility
+hamburger.addEventListener('click', toggleMobileMenu);
+
+// Add click event listeners to each mobile list link element that hides the mobile menu
+for (let i = 0; i < mobilelistlink.length; i += 1) {
+  mobilelistlink[i].addEventListener('click', hideMobileMenu);
+}
+
+// Add a click event listener to the cancel button element that hides the mobile menu
 cancelBtn.addEventListener('click', hideMobileMenu);
 
 // for creating a list of buttons for workcard and popup
@@ -40,7 +57,7 @@ const projectDetails = [
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.",
     image: 'images/popupmobile.png',
     technologies: ['Ruby on rails', 'HTML', 'CSS', 'JavaScript'],
-    live: 'https://yashodhicy.github.io/',
+    live: 'https://ochiengsteven.github.io/',
     source: 'https://github.com/yashodhicy/MyPortofolio',
   },
   {
@@ -48,24 +65,15 @@ const projectDetails = [
     description: 'Lorem ipsum dolor sit amet',
     image: 'images/popupmobile.png',
     technologies: ['Ruby on rails', 'HTML', 'CSS', 'JavaScript'],
-    live: 'https://yashodhicy.github.io/',
-    source: 'https://github.com/yashodhicy/MyPortofolio',
+    live: 'https://ochiengsteven.github.io/',
+    source: 'https://github.com/Ochiengsteven/my-portfolio',
   },
   {
     name: 'Keeping track of hundreds of components',
     description: 'Lorem ipsum dolor sit amet',
     image: 'images/popupmobile.png',
     technologies: ['Ruby on rails', 'HTML', 'CSS', 'JavaScript'],
-    live: 'https://yashodhicy.github.io/',
-    source: 'https://github.com/yashodhicy/MyPortofolio',
-  },
-
-  {
-    name: 'Keeping track of hundreds of components',
-    description: 'Lorem ipsum dolor sit amet',
-    image: 'images/popupmobile.png',
-    technologies: ['Ruby on rails', 'HTML', 'CSS', 'JavaScript'],
-    live: 'https://yashodhicy.github.io/',
+    live: 'https://ochiengsteven.github.io/',
     source: 'https://github.com/yashodhicy/MyPortofolio',
   },
 
@@ -74,7 +82,7 @@ const projectDetails = [
     description: 'Lorem ipsum dolor sit amet',
     image: 'images/popupmobile.png',
     technologies: ['Ruby on rails', 'HTML', 'CSS', 'JavaScript'],
-    live: 'https://yashodhicy.github.io/',
+    live: 'https://ochiengsteven.github.io/',
     source: 'https://github.com/yashodhicy/MyPortofolio',
   },
 
@@ -83,7 +91,16 @@ const projectDetails = [
     description: 'Lorem ipsum dolor sit amet',
     image: 'images/popupmobile.png',
     technologies: ['Ruby on rails', 'HTML', 'CSS', 'JavaScript'],
-    live: 'https://yashodhicy.github.io/',
+    live: 'https://ochiengsteven.github.io/',
+    source: 'https://github.com/yashodhicy/MyPortofolio',
+  },
+
+  {
+    name: 'Keeping track of hundreds of components',
+    description: 'Lorem ipsum dolor sit amet',
+    image: 'images/popupmobile.png',
+    technologies: ['Ruby on rails', 'HTML', 'CSS', 'JavaScript'],
+    live: 'https://ochiengsteven.github.io/',
     source: 'https://github.com/yashodhicy/MyPortofolio',
   },
 ];
